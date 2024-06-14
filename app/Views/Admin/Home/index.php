@@ -3,6 +3,8 @@
 <?php $this->section('css'); ?>
 <?php $this->endSection(); ?>
 
+
+
 <?php $this->section('content'); ?>
 <div class="container my-5">
             <div class="row justify-content-center">
@@ -11,6 +13,16 @@
                         <div class="card-header d-flex">
                             <h5>User</h5>
                             <a href="<?= base_url(); ?>/admin/logout" class="btn btn-danger btn-sm ml-auto">Keluar</a>
+                        </div>
+                        <div>
+                            <!-- Tambahkan ini di tempat yang sesuai dalam file view -->
+                            <button id="exportBtn">Export to Excel</button>
+
+                            <script>
+                                document.getElementById('exportBtn').addEventListener('click', function() {
+                                    window.location.href = '<?= base_url('/admin/home/export') ?>';
+                                });
+                            </script>  
                         </div>
                         <div class="card-body">
                             <?= alert(); ?>

@@ -81,6 +81,45 @@ class Home extends BaseController {
         return view('Admin/Home/index', $data);
     }
     
+    public function export() {
+        $users = $this->M_Base->all_data('users');
+
+        $spreadsheet = new Spreadsheet();
+        $sheet = $spreadsheet->getActiveSheet();
+
+        // Set header kolom
+        $sheet->setCellValue('A1', 'No');
+        $sheet->setCellValue('B1', 'Nama Lengkap');
+        $sheet->setCellValue('C1', 'No. Telp/WA');
+        $sheet->setCellValue('D1', 'Email');
+        $sheet->setCellValue('E1', 'Fasilitas');
+        $sheet->setCellValue('F1', 'File');
+        $sheet->setCellValue('G1', 'Ketersedian Fasilitas');
+        $sheet->setCellValue('H1', 'Status Formulir');
+
+        $row = 2;
+        foreach ($users as $index => $user) {
+            $sheet->setCellValue('A' . $row, $index + 1);
+            $sheet->setCellValue('B' . $row, $user['nama_lengkap']);
+            $sheet->setCellValue('C' . $row, $user['no_telp']);
+            $sheet->setCellValue('D' . $row, $user['email']);
+            $sheet->setCellValue('E' . $row, $user['fasilitas']);
+            $sheet->setCellValue('F' . $row, $user['file']);
+            $sheet->setCellValue('G' . $row, $user['availability']);
+            $sheet->setCellValue('H' . $row, $user['form']);
+            $row++;
+        }
+
+        $writer = new Xlsx($spreadsheet);
+        $filename = 'users_data.xlsx';
+
+        header('Content-Type: application/vnd.ms-excel');
+        header('Content-Disposition: attachment;filename="' . $filename . '"');
+        header('Cache-Control: max-age=0');
+        $writer->save('php://output');
+        exit;
+    }
+
     // Function untuk mengubah status ketersediaan fasilitas berdasarkan ID
     public function availability($id, $status) {
         
