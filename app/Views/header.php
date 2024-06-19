@@ -18,7 +18,7 @@
                 font-weight: 700;
                 font-size: 18px;
                 color: #969090;
-            }
+            } 1
             .nav-link:hover {
                 color: #ffffff;
             }
@@ -130,7 +130,7 @@
                                 <a class="dropdown-item" href="#">BMPU</a>
                                 <a class="dropdown-item" href="#">Ikrar Syahadat</a>
                                 <a class="dropdown-item" href="#">AQSA</a>
-                                <a class="dropdown-item active" href="#">Peminjaman Fasilitas</a>
+                                <a class="dropdown-item active" href="#">INFAQ (Sewa Fasiltas)</a>
                             </div>
                         </li>
                         <li class="nav-item">
@@ -142,6 +142,113 @@
         </nav>
         
         <?php $this->renderSection('content'); ?>
+        
+        <!-- Footer -->
+        <footer class="text-lg-start bg-body-tertiary text-muted">
+          <!-- Section: Social media -->
+          <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <!-- Right -->
+            <div>
+              <a href="" class="me-4 text-reset">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="" class="me-4 text-reset">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="" class="me-4 text-reset">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="" class="me-4 text-reset">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="" class="me-4 text-reset">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="" class="me-4 text-reset">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+            <!-- Right -->
+          </section>
+          <!-- Section: Social media -->
+        
+          <!-- Section: Links  -->
+          <section class="">
+            <div class="container text-md-start mt-5">
+              <!-- Grid row -->
+              <div class="row mt-3">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                  <!-- Content -->
+                  <img src="<?= base_url(); ?>/assets/images/favicon.png" alt="Logo" class="img-fluid mb-3">
+                  <!--<h6 class="text-uppercase fw-bold mb-4">-->
+                  <!--  <i class="fas fa-gem me-3"></i>Hasil Kerjasama antara Pusdai dan Telkom University-->
+                  <!--</h6>-->
+                  <p>
+                    Hasil Kerjasama antara Pusdai dan Telkom University
+                  </p>
+                </div>
+                <!-- Grid column -->
+        
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                  <!-- Links -->
+                  <h6 class="text-uppercase fw-bold mb-4">
+                    Nama Dosen Pembimbing
+                  </h6>
+                  <p>
+                    <a href="#!" class="text-reset">KEMAS RAHMAT SALEH WIHARJA, S.T., M.Eng., Ph.D.</a>
+                  </p>
+                  
+                </div>
+                <!-- Grid column -->
+        
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                  <!-- Links -->
+                  <h6 class="text-uppercase fw-bold mb-4">
+                    Nama Mahasiswa
+                  </h6>
+                  <p>
+                    <a href="#!" class="text-reset">Adhi Gozalt</a>
+                  </p>
+                  <p>
+                    <a href="#!" class="text-reset">Gandhi Risyad</a>
+                  </p>
+                  <p>
+                    <a href="#!" class="text-reset">Annalia Alfia</a>
+                  </p>
+                  <p>
+                    <a href="#!" class="text-reset">Tiara Novri</a>
+                  </p>
+                  <p>
+                    <a href="#!" class="text-reset">Wahyu Pratama</a>
+                  </p>
+                </div>
+                <!-- Grid column -->
+        
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                  <!-- Links -->
+                  
+                  <img src="<?= base_url(); ?>/assets/images/telu.png" alt="Logo" class="img-fluid mb-3"
+
+                </div>
+                <!-- Grid column -->
+              </div>
+              <!-- Grid row -->
+            </div>
+          </section>
+          <!-- Section: Links  -->
+        
+          <!-- Copyright -->
+          <div class="text-center p-4" style="background-color: #181b1f;">
+            © 2022 
+            <a class="text-reset fw-bold" href="<?= base_url(); ?>">Pusdai - JawaBarat</a>
+          </div>
+          <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
         
         <script src="<?= base_url(); ?>/assets/js/jquery.min.js"></script>
         <script src="<?= base_url(); ?>/assets/js/popper.min.js"></script>
